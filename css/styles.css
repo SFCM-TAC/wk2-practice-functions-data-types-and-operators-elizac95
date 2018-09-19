@@ -1,5 +1,7 @@
 body {
   font-family: arial;
+  color: blue;
+  background-color: pink;
 }
 
 .question {
