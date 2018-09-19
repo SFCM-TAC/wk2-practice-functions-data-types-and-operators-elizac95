@@ -71,20 +71,22 @@ function getSalePrice(originalPrice) {
   // a price with the saleAmount discount applied
   // e.g. if originalPrice is 4.00, your function should return 3.00.
   // (Don't worry about rounding to the correct number of decimal places)
-var saleprice = 5.99;
-var discount = saleprice * saleAmount;
-return discount;
+//var originalPrice = 5.99;
+var discount = originalPrice * saleAmount;
+var salePrice = originalPrice - discount;
+return salePrice;
 }
 
-function getSalePrices(threeOriginalPrices) {
+function getSalePrices(threeOriginalPrices = [price1, price2, price3]) {
   // TODO: given an array of prices for three items in a cart,
   // return a new array with the saleAmount discount applied to each.
   // TIP: see if you can reuse the getSalePrice function that you just wrote!
   // NOTE: inputs should be an array with exactly three items
-var priceList = [2.99, 3.99, 4.99]
-priceList[0] = priceList [0] * saleAmount;
-priceList[1] = priceList [1] * saleAmount;
-priceList[2] = priceList [2] * saleAmount;
+//var priceList = [2.99, 3.99, 4.99]
+var price1 = getSalePrice(threeOriginalPrices[0]);
+var price2 = getSalePrice(threeOriginalPrices[1]);
+var price3 = getSalePrice(threeOriginalPrices[2]);
+var priceList = [price1, price2, price3];
 return priceList;
 }
 
